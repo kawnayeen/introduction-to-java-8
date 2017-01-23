@@ -21,10 +21,12 @@ class PrintListTest {
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     List<Integer> values;
     PrintList printList;
+    PrintStream stdout;
 
     @BeforeEach
     void init() {
         values = Arrays.asList(1, 2, 3, 4, 5, 6);
+        stdout = System.out;
         System.setOut(new PrintStream(outputStream));
         printList = new PrintList();
     }
@@ -49,6 +51,6 @@ class PrintListTest {
 
     @AfterEach
     void cleanUp() {
-        System.setOut(null);
+        System.setOut(stdout);
     }
 }
