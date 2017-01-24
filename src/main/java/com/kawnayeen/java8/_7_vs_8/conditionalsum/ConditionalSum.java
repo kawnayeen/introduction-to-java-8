@@ -19,7 +19,7 @@ public class ConditionalSum {
     public int inJava8(List<Integer> values, Predicate<Integer> selector) {
         return values.stream()
                 .filter(value -> selector.test(value))
-                .reduce(0, (carry, value) -> carry + value);
+                .reduce(0, Integer::sum);
     }
 }
 

@@ -18,6 +18,6 @@ public class SumSquareOfElements {
     public int inJava8(List<Integer> values) {
         return values.stream()
                 .map(value -> value * value)
-                .reduce(0, (carry, value) -> carry + value);
+                .reduce(0, Integer::sum);
     }
 }

@@ -20,7 +20,8 @@ class ParallelPrintingTest {
                 .collect(toList());
 
         ParallelListPrinting parallelPrint = new ParallelListPrinting();
-        System.out.println("Print supposed to be happen in concurrent way");
+        System.out.println("Print supposed to be happen in parallel");
         parallelPrint.printList(values);
+        System.out.println("Parallel printing ended");
     }
 }

@@ -15,6 +15,6 @@ public class SumListElements {
 
     public int inJava8(List<Integer> values) {
         return values.stream()
-                .reduce(0, (carry, element) -> carry + element);
+                .reduce(0, Integer::sum);
     }
 }

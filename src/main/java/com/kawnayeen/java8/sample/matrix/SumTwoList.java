@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.sample;
+package com.kawnayeen.java8.sample.matrix;
 
 import java.util.List;
 import java.util.stream.Collectors;

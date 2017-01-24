@@ -32,6 +32,11 @@ public class PrimeCheckerTest {
         List<Integer> first5Prime = primeGenerator.generateFirstNPrime(5);
         assertNotNull(first5Prime);
         assertEquals(5,first5Prime.size());
-        first5Prime.forEach(System.out::println);
+        //first5Prime.forEach(System.out::println);
+        assertEquals(new Integer(2),first5Prime.get(0));
+        assertEquals(new Integer(3),first5Prime.get(1));
+        assertEquals(new Integer(5),first5Prime.get(2));
+        assertEquals(new Integer(7),first5Prime.get(3));
+        assertEquals(new Integer(11),first5Prime.get(4));
     }
 }
