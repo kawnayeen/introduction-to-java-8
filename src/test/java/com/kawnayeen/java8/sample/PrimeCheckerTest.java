@@ -1,5 +1,7 @@
 package com.kawnayeen.java8.sample;
 
+import com.kawnayeen.java8.sample.primenumber.PrimeChecker;
+import com.kawnayeen.java8.sample.primenumber.PrimeGenerator;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

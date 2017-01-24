@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.sample;
+package com.kawnayeen.java8.sample.primenumber;
 
 import java.util.stream.IntStream;
 

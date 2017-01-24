@@ -3,5 +3,5 @@
 /.settings
 /target
 /bin
-Java8Intro.iml
+*.iml
 .idea
