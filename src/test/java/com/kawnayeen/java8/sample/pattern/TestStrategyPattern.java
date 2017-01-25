@@ -17,8 +17,8 @@ public class TestStrategyPattern {
     @Test
     void testCalculateSum(){
         List<Integer> values = Arrays.asList(1,2,3,4,5,6);
-        assertEquals(12,CalculateSum.calculateSum(values, StrategyUtil::isEven));
-        assertEquals(9,CalculateSum.calculateSum(values, StrategyUtil::isOdd));
-        assertEquals(12,CalculateSum.calculateSum(values, StrategyUtil::isAny));
+        assertEquals(12,CalculateSum.calculateSum(values, StrategyUtil.isEven));
+        assertEquals(9,CalculateSum.calculateSum(values, StrategyUtil.isOdd));
+        assertEquals(21,CalculateSum.calculateSum(values, StrategyUtil.isEven.or(StrategyUtil.isOdd)));
     }
 }

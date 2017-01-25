@@ -1,18 +1,11 @@
 package com.kawnayeen.java8.sample.pattern._strategy;
 
+import java.util.function.Predicate;
+
 /**
  * Created by kawnayeen on 1/24/17.
  */
 public class StrategyUtil {
-    public static boolean isEven(int value){
-        return value % 2 == 0;
-    }
-
-    public static boolean isOdd(int value){
-        return value % 2 == 1;
-    }
-
-    public static boolean isAny(int value){
-        return true;
-    }
+    public static Predicate<Integer> isEven = e -> e % 2 == 0;
+    public static Predicate<Integer> isOdd = e -> e % 2 == 1;
 }
