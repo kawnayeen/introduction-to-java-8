@@ -1,0 +1,31 @@
+Stream functions
+
+-- filter (parameter)
+- 0 <= number of elements in the output <= number of input
+- parameter : Stream<T> filter takes Predicate<T>
+
+-- map (parameter)
+- number of output == number of input
+- output type may change from input type
+- parameter : Stream<T> map takes Function<T,R> to return Stream<R>
+
+both filter and map stay within their swimlanes
+
+-- reduce
+- reduce cuts across the swimlanes
+- reduce on Stream<T> takes two parameters
+- first parameter is of type T
+- second parameter is of type BiFunction<R, T, R> to produce a result of R
+
+Intermediate Operation && Terminal Operation
+- filter & map intermediate operation
+- reduce terminal operation - it triggers all the intermediate operation
+
+for lazy evaluation - function can't have side effect, in clear word, running the code
+& not running the code will not make any difference
+
+characteristics of stream
+- sized or boundless
+- ordered or unordered
+- distinct or non distinct
+- sorted or non sorted
