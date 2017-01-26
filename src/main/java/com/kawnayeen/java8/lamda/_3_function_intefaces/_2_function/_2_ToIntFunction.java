@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.lamda._3_function_intefaces._2_Function;
+package com.kawnayeen.java8.lamda._3_function_intefaces._2_function;
 
 import java.util.function.ToIntFunction;
 
