@@ -7,14 +7,14 @@ import java.util.function.ToLongFunction;
  */
 public class _4_ToLongFunction {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ToLongFunction<String> strToLong = Long::new;
 
         String firstValue = "922337203685477580";
         String secondValue = "223372036854775807";
 
-        System.out.println("First value: "+firstValue);
-        System.out.println("Second value: "+secondValue);
-        System.out.println("Sum : "+(strToLong.applyAsLong(firstValue)+strToLong.applyAsLong(secondValue)));
+        System.out.println("First value: " + firstValue);
+        System.out.println("Second value: " + secondValue);
+        System.out.println("Sum : " + (strToLong.applyAsLong(firstValue) + strToLong.applyAsLong(secondValue)));
     }
 }

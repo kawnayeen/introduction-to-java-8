@@ -6,7 +6,7 @@ import java.util.function.LongFunction;
  * Created by kawnayeen on 1/26/17.
  */
 public class _7_LongFunction {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         LongFunction<SocialSecurityNumber> getSSN = SocialSecurityNumber::new;
 
         SocialSecurityNumber ssn = getSSN.apply(Long.MAX_VALUE);
@@ -14,10 +14,10 @@ public class _7_LongFunction {
     }
 }
 
-class SocialSecurityNumber{
+class SocialSecurityNumber {
     private String ssn;
 
-    public SocialSecurityNumber(Long ssn){
+    public SocialSecurityNumber(Long ssn) {
         this.ssn = ssn.toString();
     }
 
