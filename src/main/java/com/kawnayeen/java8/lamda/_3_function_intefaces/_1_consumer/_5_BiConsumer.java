@@ -11,6 +11,6 @@ public class _5_BiConsumer {
             System.out.print("Name: " + name + "\nAge: " + age);
         };
 
-        shortBio.accept("Kawnayeen",new Integer(25));
+        shortBio.accept("Kawnayeen", new Integer(25));
     }
 }

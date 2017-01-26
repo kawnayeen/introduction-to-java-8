@@ -7,8 +7,8 @@ import java.util.function.UnaryOperator;
  */
 public class _1_UnaryOperator {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         UnaryOperator<String> lowerCase = str -> str.toLowerCase();
-        System.out.println("'AnAn' to lowercase : "+lowerCase.apply("AnAn"));
+        System.out.println("'AnAn' to lowercase : " + lowerCase.apply("AnAn"));
     }
 }

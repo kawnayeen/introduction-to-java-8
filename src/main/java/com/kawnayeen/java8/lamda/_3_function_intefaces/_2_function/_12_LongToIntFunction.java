@@ -7,7 +7,7 @@ import java.util.function.LongToIntFunction;
  */
 public class _12_LongToIntFunction {
     public static void main(String[] args) {
-        LongToIntFunction longToInt = (longValue)->(int)longValue;
+        LongToIntFunction longToInt = (longValue) -> (int) longValue;
         long longValue = 45682348765987L;
         System.out.println(longToInt.applyAsInt(longValue));
     }

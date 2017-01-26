@@ -7,7 +7,7 @@ import java.util.function.DoubleToLongFunction;
  */
 public class _11_DoubleToLongFunction {
     public static void main(String[] args) {
-        DoubleToLongFunction doubleToLong = doubleVal -> new Long((int)doubleVal);
+        DoubleToLongFunction doubleToLong = doubleVal -> new Long((int) doubleVal);
 
         System.out.println(doubleToLong.applyAsLong(2.9));
     }

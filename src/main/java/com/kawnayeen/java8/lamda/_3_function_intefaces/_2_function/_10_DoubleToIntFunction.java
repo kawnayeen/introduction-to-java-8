@@ -9,7 +9,7 @@ public class _10_DoubleToIntFunction {
     public static void main(String[] args) {
         DoubleToIntFunction diode = doubleValue -> doubleValue >= 2.5 ? 1 : 0;
 
-        System.out.println("diode (2.9) --> "+diode.applyAsInt(2.9));
-        System.out.println("diode (1.9) --> "+diode.applyAsInt(1.9));
+        System.out.println("diode (2.9) --> " + diode.applyAsInt(2.9));
+        System.out.println("diode (1.9) --> " + diode.applyAsInt(1.9));
     }
 }

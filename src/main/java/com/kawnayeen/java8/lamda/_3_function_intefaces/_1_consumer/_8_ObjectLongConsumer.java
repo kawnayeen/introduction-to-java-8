@@ -6,8 +6,8 @@ import java.util.function.ObjLongConsumer;
  * Created by kawnayeen on 1/26/17.
  */
 public class _8_ObjectLongConsumer {
-    public static void main(String[] args){
-        ObjLongConsumer<User> setUniqueId = (user,generatedId)->{
+    public static void main(String[] args) {
+        ObjLongConsumer<User> setUniqueId = (user, generatedId) -> {
             System.out.println(user.toString());
             user.setId(generatedId);
             System.out.println(user.toString());
@@ -15,11 +15,11 @@ public class _8_ObjectLongConsumer {
 
         User user = new User("Kawnayeen");
         Long generatedId = Long.MAX_VALUE;
-        setUniqueId.accept(user,generatedId);
+        setUniqueId.accept(user, generatedId);
     }
 }
 
-class User{
+class User {
     Long id;
     String name;
 
