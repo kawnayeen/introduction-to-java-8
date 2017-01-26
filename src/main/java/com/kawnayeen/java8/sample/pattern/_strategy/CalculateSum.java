@@ -9,7 +9,7 @@ import java.util.function.Predicate;
 public class CalculateSum {
     public static int calculateSum(List<Integer> values, Predicate<Integer> strategy) {
         return values.stream()
-                .filter(e -> strategy.test(e))
+                .filter(strategy)
                 .reduce(0, Integer::sum);
     }
 }
