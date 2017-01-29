@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.stream._3_stream_methods;
+package com.kawnayeen.java8.stream._3_stream_methods._1_intermediate_operation;
 
 import java.util.Arrays;
 import java.util.List;
