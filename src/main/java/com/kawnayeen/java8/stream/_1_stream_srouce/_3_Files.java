@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.stream;
+package com.kawnayeen.java8.stream._1_stream_srouce;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
