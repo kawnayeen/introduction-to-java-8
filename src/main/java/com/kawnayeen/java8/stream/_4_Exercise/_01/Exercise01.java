@@ -3,7 +3,7 @@
  *
  * JDK 8 MOOC Lesson 2 homework
  */
-package com.kawnayeen.java8.stream._3_stream_methods._2_terminal_operation._6_Excercise._01;
+package com.kawnayeen.java8.stream._4_Exercise._01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
