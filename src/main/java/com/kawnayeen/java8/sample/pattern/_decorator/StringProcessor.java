@@ -9,17 +9,17 @@ import java.util.function.Function;
 public class StringProcessor {
     private Function<String, String> filter;
 
-    public StringProcessor(){
+    public StringProcessor() {
         setFilter();
     }
 
     public void setFilter(final Function<String, String>... filters) {
         filter = Arrays.asList(filters)
                 .stream()
-                .reduce(Function.identity(),Function::andThen);
+                .reduce(Function.identity(), Function::andThen);
     }
 
-    public String getProcessedString(String string){
+    public String getProcessedString(String string) {
         String processedString = filter.apply(string);
         return processedString;
     }

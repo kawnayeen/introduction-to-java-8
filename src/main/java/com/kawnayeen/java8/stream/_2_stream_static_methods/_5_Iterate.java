@@ -7,9 +7,9 @@ import java.util.stream.DoubleStream;
  * Created by kawnayeen on 1/29/17.
  */
 public class _5_Iterate {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Double seed = 1.0;
         DoubleUnaryOperator doubleUnaryOperator = value -> value + 0.75;
-        DoubleStream.iterate(seed,doubleUnaryOperator).limit(5).forEach(System.out::println);
+        DoubleStream.iterate(seed, doubleUnaryOperator).limit(5).forEach(System.out::println);
     }
 }

@@ -9,22 +9,22 @@ import java.util.stream.IntStream;
 public class _4_Randoms {
     private static Random random;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         random = new Random();
         getIntStream();
         getIntStreamWithBound();
     }
 
-    private static void getIntStream(){
+    private static void getIntStream() {
         System.out.println("Generating int stream with known size");
         IntStream intStream = random.ints(10);
         intStream.forEach(System.out::println);
         System.out.println();
     }
 
-    private static void getIntStreamWithBound(){
+    private static void getIntStreamWithBound() {
         System.out.println("Generating int stream with known size within bound");
-        IntStream intStream = random.ints(10,50,100);
+        IntStream intStream = random.ints(10, 50, 100);
         intStream.forEach(System.out::println);
         System.out.println();
     }

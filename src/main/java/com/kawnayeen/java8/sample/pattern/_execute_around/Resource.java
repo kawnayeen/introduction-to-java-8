@@ -7,28 +7,28 @@ import java.util.function.Consumer;
  */
 public class Resource {
 
-    private Resource(){
+    private Resource() {
         System.out.println("Allocating Resources");
     }
 
-    public void op1(){
+    public static void use(Consumer<Resource> block) {
+        Resource resource = new Resource();
+        try {
+            block.accept(resource);
+        } finally {
+            resource.close();
+        }
+    }
+
+    public void op1() {
         System.out.println("Performing operation#1");
     }
 
-    public void op2(){
+    public void op2() {
         System.out.println("Performing operation#2");
     }
 
-    private void close(){
+    private void close() {
         System.out.println("Deallocating Resources");
-    }
-
-    public static void use(Consumer<Resource> block){
-        Resource resource = new Resource();
-        try{
-            block.accept(resource);
-        }finally {
-            resource.close();
-        }
     }
 }

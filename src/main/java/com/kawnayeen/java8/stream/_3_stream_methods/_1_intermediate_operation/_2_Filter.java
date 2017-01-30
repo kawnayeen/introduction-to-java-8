@@ -22,10 +22,10 @@ public class _2_Filter {
         System.out.println();
     }
 
-    private static void filteringStringLessThan5CharLong(){
+    private static void filteringStringLessThan5CharLong() {
         System.out.println();
-        Predicate<String> lessThan5Chars = value->value.length()<5;
-        List<String> strings = Arrays.asList("Kawnayeen","Anan","Gulshan","Gulu");
+        Predicate<String> lessThan5Chars = value -> value.length() < 5;
+        List<String> strings = Arrays.asList("Kawnayeen", "Anan", "Gulshan", "Gulu");
         strings.stream().filter(lessThan5Chars).forEach(System.out::println);
         System.out.println();
     }

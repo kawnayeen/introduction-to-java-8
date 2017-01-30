@@ -6,13 +6,13 @@ import static java.util.stream.Collectors.joining;
 
 /**
  * Created by kawnayeen on 1/24/17.
- *
+ * <p>
  * Given a list of name, we will convert them to uppercase and print them
  * in comma separated fashion
  */
 public class StringJoin {
 
-    public void print(List<String> names){
+    public void print(List<String> names) {
         System.out.println(
                 names.stream()
                         .map(String::toUpperCase)

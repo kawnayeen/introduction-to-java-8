@@ -23,7 +23,7 @@ public class _3_TwoParameter {
         System.out.println(personList);
 
         System.out.println("Sorting by name :) :)");
-        personList.sort((person1,person2)->person1.getName().compareTo(person2.getName()));
+        personList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
         System.out.println(personList);
     }
 }

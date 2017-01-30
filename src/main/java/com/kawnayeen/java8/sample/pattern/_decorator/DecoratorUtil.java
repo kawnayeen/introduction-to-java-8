@@ -6,6 +6,6 @@ import java.util.function.Function;
  * Created by kawnayeen on 1/25/17.
  */
 public class DecoratorUtil {
-    public static Function<String,String> toUpperCase = e->e.toUpperCase();
-    public static Function<String,String> addUnderScorePrefix = e->"_"+e;
+    public static Function<String, String> toUpperCase = e -> e.toUpperCase();
+    public static Function<String, String> addUnderScorePrefix = e -> "_" + e;
 }

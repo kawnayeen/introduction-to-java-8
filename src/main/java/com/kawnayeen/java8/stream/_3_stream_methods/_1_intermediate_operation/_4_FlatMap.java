@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * Created by kawnayeen on 1/29/17.
  */
 public class _4_FlatMap {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<String> strings = Arrays.asList(
                 "Hi kawnayeen!!!",
                 "Fear Allah",
