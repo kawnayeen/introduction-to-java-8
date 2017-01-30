@@ -1,4 +1,4 @@
-package com.kawnayeen.java8.sample.comparator;
+package com.kawnayeen.java8.stream._0_housekeeping;
 
 /**
  * Created by kawnayeen on 1/24/17.
@@ -26,5 +26,13 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

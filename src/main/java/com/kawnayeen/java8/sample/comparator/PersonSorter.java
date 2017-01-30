@@ -1,5 +1,7 @@
 package com.kawnayeen.java8.sample.comparator;
 
+import com.kawnayeen.java8.stream._0_housekeeping.Person;
+
 import java.util.List;
 import java.util.Map;
 

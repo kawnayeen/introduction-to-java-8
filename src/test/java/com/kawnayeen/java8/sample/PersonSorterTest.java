@@ -1,6 +1,6 @@
 package com.kawnayeen.java8.sample;
 
-import com.kawnayeen.java8.sample.comparator.Person;
+import com.kawnayeen.java8.stream._0_housekeeping.Person;
 import com.kawnayeen.java8.sample.comparator.PersonSorter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
