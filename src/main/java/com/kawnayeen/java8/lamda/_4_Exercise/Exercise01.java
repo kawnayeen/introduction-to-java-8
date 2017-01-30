@@ -13,6 +13,23 @@ import java.util.stream.Collectors;
  */
 public class Exercise01 {
     /**
+     * Main entry point for application
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Exercise01 lesson = new Exercise01();
+        lesson.runExercises();
+    }
+
+    /**
+     * All exercises should be completed using Lambda expressions and the new
+     * methods added to JDK 8 where appropriate. There is no need to use an
+     * explicit loop in any of the code. Use method references rather than full
+     * lambda expressions wherever possible.
+     */
+
+    /**
      * Run the exercises to ensure we got the right answers
      */
     public void runExercises() {
@@ -29,12 +46,6 @@ public class Exercise01 {
         exercise5();
     }
 
-    /**
-     * All exercises should be completed using Lambda expressions and the new
-     * methods added to JDK 8 where appropriate. There is no need to use an
-     * explicit loop in any of the code. Use method references rather than full
-     * lambda expressions wherever possible.
-     */
     /**
      * Exercise 1
      * <p>
@@ -92,7 +103,7 @@ public class Exercise01 {
         /* YOUR CODE HERE */
         String result = map.keySet()
                 .stream()
-                .map(key->key+map.get(key))
+                .map(key -> key + map.get(key))
                 .collect(Collectors.joining());
         System.out.println(result);
     }
@@ -110,15 +121,5 @@ public class Exercise01 {
         t.start();
 
     /* YOUR CODE HERE */
-    }
-
-    /**
-     * Main entry point for application
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Exercise01 lesson = new Exercise01();
-        lesson.runExercises();
     }
 }
