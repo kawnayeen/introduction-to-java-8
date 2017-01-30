@@ -103,7 +103,7 @@ public class Exercise01 {
    */
   private void exercise4() throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(
-        Paths.get("storage/SonnetI.txt"), StandardCharsets.UTF_8)) {
+        Paths.get("storage/stream_ex01/SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
       System.out.println(reader.lines().count());
     }
@@ -117,7 +117,7 @@ public class Exercise01 {
    */
   private void exercise5() throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(
-        Paths.get("storage/SonnetI.txt"), StandardCharsets.UTF_8)) {
+        Paths.get("storage/stream_ex01/SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
       reader.lines()
               .flatMap(s->Pattern.compile(WORD_REGEXP).splitAsStream(s))
@@ -133,7 +133,7 @@ public class Exercise01 {
    */
   private void exercise6() throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(
-        Paths.get("storage/SonnetI.txt"), StandardCharsets.UTF_8)) {
+        Paths.get("storage/stream_ex01/SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
       reader.lines()
               .flatMap(s->Pattern.compile(WORD_REGEXP).splitAsStream(s))
@@ -149,7 +149,7 @@ public class Exercise01 {
    */
   private void exercise7() throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(
-        Paths.get("storage/SonnetI.txt"), StandardCharsets.UTF_8)) {
+        Paths.get("storage/stream_ex01/SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
       reader.lines()
               .flatMap(s->Pattern.compile(WORD_REGEXP).splitAsStream(s))
