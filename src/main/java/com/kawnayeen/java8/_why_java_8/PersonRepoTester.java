@@ -5,6 +5,7 @@ import com.kawnayeen.java8._why_java_8._java_8.Java8PersonRepository;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by kawnayeen on 2/1/17.
@@ -33,11 +34,11 @@ public class PersonRepoTester {
         );
     }
 
-    private static IPersonRepository getJava7Version(){
+    private static IPersonRepository getJava7Version() {
         return new Java7PersonRepository();
     }
 
-    private static IPersonRepository getJava8Version(){
+    private static IPersonRepository getJava8Version() {
         return new Java8PersonRepository();
     }
 
@@ -59,7 +60,11 @@ public class PersonRepoTester {
         System.out.println();
 
         System.out.println("Group By Sex");
-        System.out.println(personRepository.groupBySex(personList));
+        Map<SEX, List<Person>> grouping = personRepository.groupBySex(personList);
+        System.out.println("Males : ");
+        grouping.get(SEX.MALE).forEach(System.out::println);
+        System.out.println("Females : ");
+        grouping.get(SEX.FEMALE).forEach(System.out::println);
         System.out.println();
 
         System.out.println("Oldest Peron ");
@@ -74,6 +79,6 @@ public class PersonRepoTester {
         System.out.println(personRepository.findOldestFemale(personList).toString());
         System.out.println();
 
-        System.out.println("Average Age : "+personRepository.averageAge(personList));
+        System.out.println("Average Age : " + personRepository.averageAge(personList));
     }
 }
