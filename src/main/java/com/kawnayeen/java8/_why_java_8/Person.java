@@ -9,6 +9,12 @@ public class Person {
     private SEX sex;
     private int age;
 
+    public Person() {
+        this.name = "";
+        this.sex = SEX.MALE;
+        this.age = 0;
+    }
+
     public Person(String name, SEX sex, int age) {
         this.name = name;
         this.sex = sex;

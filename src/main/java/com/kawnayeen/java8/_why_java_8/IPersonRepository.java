@@ -24,5 +24,5 @@ public interface IPersonRepository {
 
     Person findOldestFemale(List<Person> personList);
 
-    int averageAge(List<Person> personList);
+    double averageAge(List<Person> personList);
 }

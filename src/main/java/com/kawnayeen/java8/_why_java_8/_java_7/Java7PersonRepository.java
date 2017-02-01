@@ -53,7 +53,7 @@ public class Java7PersonRepository implements IPersonRepository {
     }
 
     @Override
-    public int averageAge(List<Person> personList) {
+    public double averageAge(List<Person> personList) {
         return 0;
     }
 }
