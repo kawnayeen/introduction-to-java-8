@@ -15,7 +15,8 @@ public class PersonRepoTester {
 
     public static void main(String[] args) {
         initPersonList();
-        runRepoTester(getJava8Version());
+        //runRepoTester(getJava8Version());
+        runRepoTester(getJava7Version());
     }
 
     private static void initPersonList() {
@@ -67,7 +68,7 @@ public class PersonRepoTester {
         grouping.get(SEX.FEMALE).forEach(System.out::println);
         System.out.println();
 
-        System.out.println("Oldest Peron ");
+        System.out.println("Oldest Person ");
         System.out.println(personRepository.findOldestPerson(personList).toString());
         System.out.println();
 
