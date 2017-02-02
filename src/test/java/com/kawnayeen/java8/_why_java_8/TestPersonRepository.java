@@ -1,6 +1,5 @@
 package com.kawnayeen.java8._why_java_8;
 
-import com.kawnayeen.java8._why_java_8._java_7.Java7PersonRepository;
 import org.junit.jupiter.api.*;
 
 import java.util.Arrays;
@@ -13,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created by kawnayeen on 2/2/17.
  */
 @DisplayName("Testing Java 7 Implementation of IPersonRepository")
-class TestJava7PersonRepository {
-    static List<Person> personList;
-    static IPersonRepository personRepository;
+abstract class TestPersonRepository {
+    protected static List<Person> personList;
+    protected static IPersonRepository personRepository;
 
     @BeforeAll
     static void beforeAll() {
@@ -32,7 +31,12 @@ class TestJava7PersonRepository {
                 new Person("Yusha", SEX.FEMALE, 6),
                 new Person("Boni", SEX.MALE, 8)
         );
-        personRepository = new Java7PersonRepository();
+        //personRepository = new Java7PersonRepository();
+    }
+
+    @AfterAll
+    static void afterAll() {
+        personList.clear();
     }
 
     @BeforeEach
@@ -98,7 +102,7 @@ class TestJava7PersonRepository {
 
     @Test
     @DisplayName("Finding Oldest Person")
-    void testFindOldestPerson(){
+    void testFindOldestPerson() {
         Person oldestPerson = personRepository.findOldestPerson(personList);
         assertNotNull(oldestPerson);
         assertAll("Oldest person",
@@ -109,7 +113,7 @@ class TestJava7PersonRepository {
 
     @Test
     @DisplayName("Finding Oldest Male")
-    void testFindOldestMale(){
+    void testFindOldestMale() {
         Person oldestMale = personRepository.findOldestMale(personList);
         assertAll("Oldest Male",
                 () -> assertEquals(25, oldestMale.getAge()),
@@ -119,7 +123,7 @@ class TestJava7PersonRepository {
 
     @Test
     @DisplayName("Finding Oldest Female")
-    void testFindOldestFemale(){
+    void testFindOldestFemale() {
         Person oldestFemale = personRepository.findOldestFemale(personList);
         assertAll("Oldest Female",
                 () -> assertEquals(16, oldestFemale.getAge()),
@@ -129,10 +133,5 @@ class TestJava7PersonRepository {
 
     @AfterEach
     void afterEach() {
-    }
-
-    @AfterAll
-    static void afterAll() {
-        personList.clear();
     }
 }
