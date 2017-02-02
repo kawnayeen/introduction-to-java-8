@@ -7,6 +7,7 @@ import com.kawnayeen.java8._why_java_8.SEX;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -51,23 +52,22 @@ public class Java8PersonRepository implements IPersonRepository {
 
     @Override
     public Person findOldestPerson(List<Person> personList) {
-        return personList.stream()
-                .max(Comparator.comparingInt(Person::getAge))
-                .orElse(new Person());
+        return findOldestOne(personList, p -> true);
     }
 
     @Override
     public Person findOldestMale(List<Person> personList) {
-        return personList.stream()
-                .filter(p -> p.getSex() == SEX.MALE)
-                .max(Comparator.comparingInt(Person::getAge))
-                .orElse(new Person());
+        return findOldestOne(personList, p -> p.getSex() == SEX.MALE);
     }
 
     @Override
     public Person findOldestFemale(List<Person> personList) {
+        return findOldestOne(personList, p -> p.getSex() == SEX.FEMALE);
+    }
+
+    private Person findOldestOne(List<Person> personList, Predicate<Person> personPredicate) {
         return personList.stream()
-                .filter(p -> p.getSex() == SEX.FEMALE)
+                .filter(personPredicate)
                 .max(Comparator.comparingInt(Person::getAge))
                 .orElse(new Person());
     }
