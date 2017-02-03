@@ -13,10 +13,10 @@ class TestMatrix {
     @DisplayName("Testing matrix construction with valid input")
     @Test
     void testMatrixInstantiation() {
-        long[][] arrays = {
-                {1, 2, 3},
-                {2, 1, 3},
-                {3, 2, 1}
+        Long[][] arrays = {
+                {Long.valueOf(1), Long.valueOf(2), Long.valueOf(3)},
+                {Long.valueOf(2), Long.valueOf(1), Long.valueOf(3)},
+                {Long.valueOf(3), Long.valueOf(2), Long.valueOf(1)}
         };
         Matrix matrix = new Matrix(arrays);
         assertNotNull(matrix);
@@ -29,10 +29,10 @@ class TestMatrix {
     @DisplayName("Invalid input will throw run time exception")
     @Test
     void testMatrixInstantiationWithBadInput() {
-        long[][] badMatrix = new long[][]{
-                {1, 2, 3},
-                {1, 2},
-                {1}
+        Long[][] badMatrix = new Long[][]{
+                {Long.valueOf(1), Long.valueOf(2), Long.valueOf(3)},
+                {Long.valueOf(1), Long.valueOf(2)},
+                {Long.valueOf(1)}
         };
         assertThrows(RuntimeException.class, () -> new Matrix(badMatrix));
     }
@@ -40,14 +40,14 @@ class TestMatrix {
     @DisplayName("Testing the 'square matrix' logic")
     @Test
     void testSquareMatrix() {
-        long[][] squareArrays = {
-                {1, 2, 3},
-                {2, 1, 3},
-                {3, 2, 1}
+        Long[][] squareArrays = {
+                {Long.valueOf(1), Long.valueOf(2), Long.valueOf(3)},
+                {Long.valueOf(2), Long.valueOf(1), Long.valueOf(3)},
+                {Long.valueOf(3), Long.valueOf(2), Long.valueOf(1)}
         };
-        long[][] nonSquareArrays = {
-                {1, 2, 3},
-                {2, 1, 3}
+        Long[][] nonSquareArrays = {
+                {Long.valueOf(1), Long.valueOf(2), Long.valueOf(3)},
+                {Long.valueOf(2), Long.valueOf(1), Long.valueOf(3)}
         };
         Matrix matrix = new Matrix(squareArrays);
         assertNotNull(matrix);

@@ -6,9 +6,6 @@ import java.util.stream.IntStream;
  * Created by kawnayeen on 1/25/17.
  */
 public class MatrixSum {
-    int rows = 3;
-    int cols = 3;
-
 
     public Integer[][] matrixAddition(Integer[][] firstMatrix, Integer[][] secondMatrix) {
         if (!isEqual(firstMatrix, secondMatrix))
