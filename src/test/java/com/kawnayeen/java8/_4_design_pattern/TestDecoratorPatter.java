@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Created by kawnayeen on 1/25/17.
  */
-public class TestDecoratorPatter {
+class TestDecoratorPatter {
 
     @Test
     void testStringProcessor() {

@@ -9,7 +9,7 @@ import java.util.Arrays;
 /**
  * Created by kawnayeen on 1/25/17.
  */
-public class MatrixSumTest {
+class MatrixSumTest {
 
     @Test
     void testMatrixAddition() {

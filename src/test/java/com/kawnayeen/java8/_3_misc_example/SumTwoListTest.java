@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * Created by kawnayeen on 1/24/17.
  */
-public class SumTwoListTest {
+class SumTwoListTest {
 
     @Test
     void testSumTwoListWithValidInput(){

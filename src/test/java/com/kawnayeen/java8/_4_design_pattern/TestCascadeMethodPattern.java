@@ -12,7 +12,7 @@ import java.io.PrintStream;
 /**
  * Created by kawnayeen on 1/24/17.
  */
-public class TestCascadeMethodPattern {
+class TestCascadeMethodPattern {
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     PrintStream stdout;
 

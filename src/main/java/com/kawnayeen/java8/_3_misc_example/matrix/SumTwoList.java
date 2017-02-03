@@ -1,8 +1,10 @@
 package com.kawnayeen.java8._3_misc_example.matrix;
 
+import com.kawnayeen.java8._3_misc_example._stream_util.StreamUtil;
+
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Created by kawnayeen on 1/24/17.
@@ -20,8 +22,8 @@ public class SumTwoList {
         if (firstList.size() != secondList.size())
             return null;
 
-        return IntStream.range(0, firstList.size())
-                .mapToObj(i -> firstList.get(i) + secondList.get(i))
-                .collect(Collectors.toList());
+        return StreamUtil
+                .zip(firstList.stream(), secondList.stream(), (a, b) -> a + b)
+                .collect(toList());
     }
 }

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Created by kawnayeen on 1/23/17.
  */
-public class PrimeCheckerTest {
+class PrimeCheckerTest {
     @Test
     void testIsPrime(){
         assertTrue(PrimeChecker.isPrime(3));

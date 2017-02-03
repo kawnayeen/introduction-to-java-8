@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Created by kawnayeen on 1/24/17.
  */
-public class TestStrategyPattern {
+class TestStrategyPattern {
 
     @Test
     void testCalculateSum(){

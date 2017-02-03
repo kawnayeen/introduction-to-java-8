@@ -11,7 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
  */
 @ExtendWith(Java8PersonRepoResolver.class)
 @DisplayName("Testing Java 8 implementation of Person Repository")
-public class TestJava8PersonRepo extends TestPersonRepository {
+class TestJava8PersonRepo extends TestPersonRepository {
     @BeforeAll
     static void beforeAll(Java8PersonRepository java8PersonRepository) {
         personRepository = java8PersonRepository;
